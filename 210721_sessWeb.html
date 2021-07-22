@@ -1,0 +1,25 @@
+<?php
+	session_save_path('./session');
+	session_start();
+	if(!isset($_SESSION['is_login'])){
+	    header('Location: ./210721_sessLogin.html');
+	}
+?>
+<html>
+    <body>
+        Welcome <?php echo $_SESSION['nickname'];?>!!<br />
+        <a href="./210721_sessLogout.php">Logout</a>    
+    </body>
+</html>
+<!-- 
+html에서 <?php?>가 주석처리될 경우
+
+1. php.ini 파일에서
+short_open_tag = On
+Off -> On
+으로 변경 
+
+2. bitnami\apache2\conf\httpd.conf 파일에서
+AddType application/x-httpd-php .php4 .php .phtml .ph .inc .html .htm
+추가하여 php도 읽히도록 변경
+-->

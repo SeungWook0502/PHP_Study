@@ -1,5 +1,5 @@
 <?php
-
+    //no debugging
     $db_host = "localhost"; 
     $db_user = "root"; 
     $db_passwd = "12341234";
@@ -52,7 +52,7 @@
             <nav>
                 <ul>
                     <?php
-                    while($row = mysqli_fetch_array($connect, $list_result)) {
+                    while($row = mysqli_fetch_array($list_result)) {
                         echo "<li><a href=\"?id={$row['id']}\">".htmlspecialchars($row['title'])."</a></li>";                        }
                     ?>
                 </ul>
