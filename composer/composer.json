@@ -1,0 +1,20 @@
+{
+    "name": "wjstm/composer",
+    "autoload": {
+        "psr-4": {
+            "Wjstm\\Composer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "SeungWook0502",
+            "email": "SeungWook0502@gmail.com"
+        }
+    ],
+    "require": {
+        "monolog/monolog": "^2.3"
+    },
+    "autoload": {
+        "psr-4" : {"Greeting\\":"Greeting/"}
+    }
+}
